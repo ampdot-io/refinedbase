@@ -1,4 +1,4 @@
-apt install -y python3-pip
+DEBIAN_FRONTEND=noninteractive apt install -y python3-pip cuda-toolkit
 pip install --upgrade pip
 pip install uv
-uv pip install --system "sglang" --prerelease=allow
+uv run --with vllm vllm --help
